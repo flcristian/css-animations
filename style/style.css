@@ -1,0 +1,64 @@
+*{
+    font-family: 'Comfortaa', cursive;
+}
+
+/* TRANSITION */
+
+.transition-div{
+    display: inline-block;
+    border-radius: 4px;
+    margin: 30px;
+    padding: 10px 30px 10px 30px;
+    background-color: rgb(26, 85, 245);
+    color: white;
+    transition: background-color 0.5s;
+}
+
+.transition-div:hover{
+    background-color: rgb(228, 53, 53);
+}
+
+/* 2D TRANSFORMATIONS */
+
+.transformation-container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 15px;
+}
+
+.div2d{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(245, 139, 40);
+    width: 100px;
+    height: 100px;
+    transition: scale 0.3s, translate 0.3s, rotate 0.6s, transform 0.3s;
+}
+
+.div2d-1:hover{
+    scale: 1.2;
+}
+
+.div2d-2:hover{
+    translate: 50px;
+}
+
+.div2d-3:hover{
+    rotate: 180deg;
+}
+
+.div2d-4:hover{
+    transform: skew(10deg, 10deg);
+}
+
+
+
+
+
+
+
