@@ -3,23 +3,53 @@
 }
 
 html{
-    height: 3000px;
+    height: 4000px;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    height: 100%;
+}
+
+.border-container{
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.main-container{
+    margin: auto;
+    width: 97%;
+    height: 100%;
+    border-left: 7px solid black;
+    border-right: 7px solid black;
 }
 
 /* TRANSITION */
 
-.transition-div{
+.title-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-div{
     display: inline-block;
     border-radius: 4px;
-    margin: 30px;
+    margin: 30px 30px 50px 30px;
     padding: 10px 30px 10px 30px;
-    background-color: rgb(26, 85, 245);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 2.4em;
     transition: background-color 0.5s;
 }
 
-.transition-div:hover{
-    background-color: rgb(228, 53, 53);
+.title-div:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 /* TRANSFORMATIONS */
@@ -38,7 +68,7 @@ html{
     justify-content: center;
     color: white;
     border-radius: 10px;
-    background-color: rgb(245, 139, 40);
+    background-color: rgb(0, 0, 0);
     width: 100px;
     height: 100px;
     transition: scale 0.3s, translate 0.3s, rotate 0.6s, transform 0.3s;
@@ -83,7 +113,7 @@ html{
 }
 
 .item-7{
-    background-color: rgb(77, 77, 212);
+    background-color: rgb(0, 0, 0);
     position: absolute;
     border-radius: 0;
     transition-timing-function: ease-out;
@@ -104,12 +134,16 @@ html{
 /* ANIMATIONS */
 
 .animations-container{
-    margin-top: 200px;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-self: center;
     gap: 20px;
+    border: 2px solid black;
+    border-width: 2px 0 2px 0;
 }
 
 .anim-title{
@@ -136,7 +170,7 @@ html{
 .anim-1:before{
     position: absolute;
     content: '';
-    background-color: rgb(240, 120, 73);
+    background-color: rgb(3, 3, 3);
     top: 0;
     left: 0;
     height: 100%;
@@ -151,10 +185,14 @@ html{
     transform: rotate(0deg);
 }
 
+.anim-1:hover{
+    color: white;
+}
+
 .anim-2:before{
     position: absolute;
     content: '';
-    background-color: rgb(0, 89, 255);
+    background-color: rgb(0, 0, 0);
     top: 0;
     width: 100px;
     height: 100px;
@@ -172,14 +210,18 @@ html{
     opacity: 100%;
 }
 
+.anim-2:hover{
+    color: white;
+}
+
 .anim-3:hover{
-    background-color: red;
+    background-color: rgb(0, 0, 0);
 }
 
 .anim-3:before{
     position: absolute;
     content: '';
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     left: 0;
     top: -50px;
     width: 30px;
@@ -194,10 +236,14 @@ html{
     transform: translateX(200px) rotate(30deg);
 }
 
+.anim-3:hover{
+    color: white;
+}
+
 .anim-4:before{
     position: absolute;
     content: '';
-    background-color: rgba(250, 21, 117, 0.8);
+    background-color: rgb(0, 0, 0);
     left: -30px;
     top: -200px;
     width: 250px;
@@ -213,9 +259,13 @@ html{
     transform: translateY(100px);
 }
 
+.anim-4:hover{
+    color: white;
+}
+
 .anim-5{
-    border: 5px solid brown;
-    background-color: brown;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
     color: white;
     transition: all 0.5s;
 }
@@ -253,7 +303,7 @@ html{
 }
 
 .anim-6-container{
-    border: 2px solid rgb(11, 143, 196);
+    border: 2px solid rgb(0, 0, 0);
     width: 200px;
     height: 60px;
     display: flex;
@@ -271,7 +321,7 @@ html{
     overflow: show;
     border: 0;
     padding: 0;
-    color: rgb(11, 143, 196);
+    color: rgb(0, 0, 0);
     position: relative;
 }
 
@@ -282,7 +332,7 @@ html{
     height: 100%;
     left: 0;
     top: calc(100% + 30px);
-    background-color: rgb(11, 143, 196);
+    background-color: rgb(0, 0, 0);
     transition: all 1s;
 }
 
@@ -313,15 +363,106 @@ html{
     color: white;
 }
 
+.anim-7 {
+    color: #000000;
+    border: 2px solid #000000;
+    position: relative;
+    transition: all 0.4s;
+    overflow: hidden;
+}
+
+.anim-7:before {
+    content: '';
+    position: absolute;
+    Left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    z-index: -1;
+    transform: translateY(-100%);
+    transition: all 0.4s;
+}
+
+.anim-7:hover:before {
+    transform: translateY(0);
+}
+
+.anim-7:hover {
+    color: white;
+}
+
+.anim-8 {
+    color: #000000;
+    border: 2px solid #000000;
+    position: relative;
+    transition: 1s;
+ }
+ 
+ .anim-8:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    transition: 1s;
+    transform: rotateX(90deg);
+    z-index: -1;
+ }
+ 
+ .anim-8:after {
+     content: '';
+     position: absolute;
+     top: 0;
+     Left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: #000000;
+     transition: 1s;
+     transform: rotateY(90deg);
+     z-index: -1;
+ }
+ 
+ .anim-8:hover:before {
+     transform: rotateX(0deg);
+ }
+ 
+ .anim-8:hover:after {
+     transform: rotateY(0deg);
+ }
+ 
+ .anim-8:hover {
+     color: white;
+ }
+ 
+.anim-9 {
+    color: #000000;
+    border: 2px solid #000000;
+    transition: all 0.5s;
+ }
+ 
+ .anim-9:hover {
+     font-weight: 900;
+     Letter-spacing: 10px;
+     border: 5px solid #000000;
+ }
+ 
+
 /* IMAGE ANIMATIONS */
 
 .image-container{
-    margin-top: 200px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-self: center;
-    gap: 20px;
+    gap: 50px;
+}
+
+.img-title:hover{
+    transform: rotate(10deg);
 }
 
 .img-container{
@@ -330,13 +471,12 @@ html{
     transition: all 0.5s;
     position: relative;
     overflow: hidden;
-    border-radius: 5px;
 }
 
 .img{
-    width: 300px;
-    height: 300px;
+    object-fit: cover;
     transition: all 0.5s;
+    transition-timing-function: linear;
 }
 
 .overlay{
@@ -344,13 +484,7 @@ html{
     height: 300px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    opacity: 0;
-    transition: all 0.5s;
+    transition-timing-function: linear;
 }
 
 .overlay-title{
@@ -373,31 +507,246 @@ html{
     transform: scale(1.4) rotate(-15deg);
 }
 
+.overlay-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
 .overlay-1:hover{
     opacity: 100%;
+}
+
+.img-2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.8s;
+}
+
+.img-2-container:hover .img-2{
+    transform: translateX(100%);
+}
+
+.overlay-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.8s;
+    background-color: black;
+    transform: translateX(-100%);
+}
+
+.img-2-container:hover .overlay-2{
+    transform: translateX(0);
+}
+
+.img-3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.8s;
+}
+
+.img-3-container:hover .img-3{
+    transform: translateY(-30%);
+}
+
+.overlay-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.8s;
+    background-color: black;
+    transform: translateY(100%);
+}
+
+.overlay-title-3{
+    padding-top: 10px;
+    font-size: 1.5em;
+    color: white
+}
+
+.overlay-text-3{
+    font-size: 0.8em;
+    color: white;
+}
+
+.img-3-container:hover .overlay-3{
+    transform: translateY(70%);
+}
+
+/* MENU ANIMATIONS */
+
+.menu-container{
+    margin-top: 100px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap: 50px;
+    border: 2px solid black;
+    border-width: 2px 0 2px 0;
+}
+
+.menu-title:hover{
+    transform: rotate(-10deg);
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.aitem{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0 10px;
+    padding: 5px 10px;
+    transition: all .3s;
+}
+
+.aitem-1:before{
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #b6122d;
+    border-width: 0 0 3px 3px;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.aitem-1:after{
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #b6122d;
+    border-width: 3px 3px 0 0;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.aitem-1:hover:before{
+    opacity: 1;
+    bottom: -8px;
+    left: -8px;
+}
+
+.aitem-1:hover:after{
+    opacity: 1;
+    top: -8px;
+    right: -8px;
+}
+
+.aitem-1:hover{
+    color: white;
+    background-color: #b6122d;
+    border-radius: 3px;
+}
+
+.menu-2{
+    margin-top: 30px;
+}
+
+.aitem-2{
+    padding: 0;
+    margin: 0 20px;
+}
+
+.aitem-2:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    top: 110%;
+    left: 0;
+    background-color: rgb(75, 170, 66);
+    transition: all .3s;
+}
+
+.aitem-2:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    top: 110%;
+    right: 0;
+    background-color: rgb(170, 66, 89);
+    transition: all .3s;
+}
+
+.aitem-2:hover:before{
+    width: 50%;
+    transform: translateX(100%);
+}
+
+.aitem-2:hover:after{
+    width: 50%;
+    transform: translateX(-100%);
 }
 
 /* TEXT ANIMATIONS */
 
 .text-container{
-    margin-top: 200px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-self: center;
-    gap: 20px;
+    gap: 50px;
+}
+
+.text-title:hover{
+    transform: rotate(10deg);
 }
 
 .text{
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
-.letter{
-    list-style: none;
-    font-size: 100px;
-    font-weight: bold;
-    letter-spacing: 10px;
-    transition: all 2s;
+.text-1{
+    color: rgba(0, 0, 0, 0.205);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 6em;
+    position: relative;
+}
+
+.text-1:before{
+    content: "TEXT";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(15, 15, 15);
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.text-1:hover{
+    cursor: pointer;
+}
+
+.text-1:hover:before{
+    width: 100%;
 }
